@@ -46,22 +46,22 @@ public class MainGame {
 		for (i = 0; i < 20; i++) {
 			actionCards.add(new ActionCard(0)); // create cards with ID 0 (collect from bank)
 			actionCards.get(i).generateSubID(); // See ActionCard class
-			actionCards.get(i).assignDescriptions(actionCards.get(i).mainID);
+			actionCards.get(i).assignDescriptions(actionCards.get(i).getMainID());
 		}
 		for (i = 20; i < 40; i++) {
 			actionCards.add(new ActionCard(1)); // create cards with ID 1 (pay the bank)
 			actionCards.get(i).generateSubID();
-			actionCards.get(i).assignDescriptions(actionCards.get(i).mainID);
+			actionCards.get(i).assignDescriptions(actionCards.get(i).getMainID());
 		}
 		for (i = 40; i < 45; i++) {
 			actionCards.add(new ActionCard(2)); // ID 2 (pay the player)
 			actionCards.get(i).generateSubID();
-			actionCards.get(i).assignDescriptions(actionCards.get(i).mainID);
+			actionCards.get(i).assignDescriptions(actionCards.get(i).getMainID());
 		}
 		for (i = 45; i < 50; i++) {
 			actionCards.add(new ActionCard(3)); // ID 3 (collect from player)
 			actionCards.get(i).generateSubID();
-			actionCards.get(i).assignDescriptions(actionCards.get(i).mainID);
+			actionCards.get(i).assignDescriptions(actionCards.get(i).getMainID());
 		}
 		
 		Collections.shuffle(actionCards);
@@ -70,7 +70,7 @@ public class MainGame {
 	public void displayActionCards(ArrayList<ActionCard> deck) {
 		System.out.println("Action Cards generated (uses stack implementation):");
 		for (ActionCard card : deck)
-			System.out.print(card.typeOfCard + ", ");
+			System.out.print(card.getTypeOfCard() + ", ");
 		System.out.println("\n");
 	}
 	

@@ -16,10 +16,10 @@ import java.util.*;
  */
 
 public class ActionCard {
-	int mainID, subID;
-	String typeOfCard;
-	String description;
-	String toDoAction;
+	private int mainID, subID;
+	private String typeOfCard;
+	private String description;
+	private String toDoAction;
 	
 	private static int head; // stack implementation
 	
@@ -223,7 +223,16 @@ public class ActionCard {
 		head--;
 		return temp;
 	}
+	
+	public int getMainID() {
+		return this.mainID;
+	}
+	
+	public String getTypeOfCard() {
+		return this.toDoAction;
+	}
 
+	@Override
 	public String toString() { // Return card name and its description.
 		return this.typeOfCard + "\n" + this.description + "\n";
 	}
