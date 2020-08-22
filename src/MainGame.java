@@ -3,7 +3,7 @@ public class MainGame {
 	private int numberOfPlayersInGame;
 	private ArrayList<ActionCard> actionCards;
 	private Player[] players;
-	int turn;
+	private int turn;
 
 	private Scanner input = new Scanner(System.in);
 	
