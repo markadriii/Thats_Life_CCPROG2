@@ -220,7 +220,16 @@ public class ActionCard {
 	
 	public static ActionCard pop(ArrayList<ActionCard> deck) { // return the top most card, then shift head to next card.
 		ActionCard temp = ActionCard.top(deck);
-		head--;
+		if(head > 0)
+		{	
+			head--;
+		}
+		else
+		{
+			Collections.shuffle(deck);
+			head = 49;
+		}
+		
 		return temp;
 	}
 	
